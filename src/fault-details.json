@@ -1,0 +1,20 @@
+{
+  "project_id": 68958,
+  "klass": "TypeError",
+  "component": null,
+  "action": null,
+  "environment": null,
+  "resolved": false,
+  "ignored": false,
+  "created_at": "2023-04-21T10:44:54.246838Z",
+  "comments_count": 0,
+  "message": "Cannot read properties of undefined (reading 'valueA')",
+  "notices_count": 1,
+  "last_notice_at": "2023-04-21T10:44:20.418034Z",
+  "tags": [],
+  "id": 95438392,
+  "assignee": null,
+  "url": "https://app.honeybadger.io/projects/68958/faults/95438392",
+  "deploy": null,
+  "tickets": []
+}

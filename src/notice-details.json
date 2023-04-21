@@ -1,0 +1,158 @@
+{
+  "results": [
+    {
+      "environment": {
+        "project_root": "/Users/pangratios/Work/honeybadger/honeybadger-js/packages/js/examples/express",
+        "hostname": "pangratioss-mbp",
+        "time": "Fri, 21 Apr 2023 10:44:19 GMT",
+        "pid": 66506,
+        "stats": {
+          "load": {
+            "one": 4.19921875,
+            "five": 5.0146484375,
+            "fifteen": 4.05029296875
+          },
+          "mem": {
+            "free": 26464256,
+            "total": 17179869184
+          }
+        }
+      },
+      "environment_name": null,
+      "cookies": {},
+      "created_at": "2023-04-21T10:44:20.418034Z",
+      "message": "Cannot read properties of undefined (reading 'valueA')",
+      "fault_id": 95438392,
+      "web_environment": {
+        "REQUEST_METHOD": "POST",
+        "HTTP_CONTENT_TYPE": "application/json",
+        "HTTP_AUTHORIZATION": "Basic VXJDeFhZTm5wMnMtVTRLZ3FWWHY6",
+        "HTTP_USER_AGENT": "curl/7.87.0",
+        "HTTP_HOST": "app.honeybadger.io",
+        "HTTP_ACCEPT": "*/*",
+        "HTTP_POSTMAN_TOKEN": "b52b65e6-00c2-4812-a2c3-464446eb8640",
+        "HTTP_CONTENT_LENGTH": "0"
+      },
+      "request": {
+        "url": "http://app.honeybadger.io:3000/math-division",
+        "params": {},
+        "session": {},
+        "context": {
+          "user_id": "1"
+        }
+      },
+      "backtrace": [
+        {
+          "file": "[PROJECT_ROOT]/index.js",
+          "method": "\u003cunknown\u003e",
+          "number": 27,
+          "column": 27,
+          "source": {
+            "25": "",
+            "26": "app.post('/math-division', (req, res) =\u003e {",
+            "27": "  const valueA = req.body.valueA",
+            "28": "  const valueB = req.body.valueB",
+            "29": "  if (valueB === 0) {"
+          },
+          "application_file": "index.js",
+          "context": "app"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/layer.js",
+          "method": "Layer.handle [as handle_request]",
+          "number": 95,
+          "column": 5,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/route.js",
+          "method": "next",
+          "number": 144,
+          "column": 13,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/route.js",
+          "method": "Route.dispatch",
+          "number": 114,
+          "column": 3,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/layer.js",
+          "method": "Layer.handle [as handle_request]",
+          "number": 95,
+          "column": 5,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/index.js",
+          "method": "\u003cunknown\u003e",
+          "number": 284,
+          "column": 15,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/index.js",
+          "method": "Function.process_params",
+          "number": 346,
+          "column": 12,
+          "context": "all"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/index.js",
+          "method": "next",
+          "number": 280,
+          "column": 10,
+          "context": "all"
+        },
+        {
+          "file": "[PROJECT_ROOT]/index.js",
+          "method": "\u003cunknown\u003e",
+          "number": 19,
+          "column": 3,
+          "application_file": "index.js",
+          "context": "app"
+        },
+        {
+          "file": "[NODE_MODULES]/express/lib/router/layer.js",
+          "method": "Layer.handle [as handle_request]",
+          "number": 95,
+          "column": 5,
+          "context": "all"
+        }
+      ],
+      "application_trace": [
+        {
+          "file": "[PROJECT_ROOT]/index.js",
+          "method": "\u003cunknown\u003e",
+          "number": 27,
+          "column": 27,
+          "source": {
+            "25": "",
+            "26": "app.post('/math-division', (req, res) =\u003e {",
+            "27": "  const valueA = req.body.valueA",
+            "28": "  const valueB = req.body.valueB",
+            "29": "  if (valueB === 0) {"
+          },
+          "application_file": "index.js",
+          "context": "app"
+        },
+        {
+          "file": "[PROJECT_ROOT]/index.js",
+          "method": "\u003cunknown\u003e",
+          "number": 19,
+          "column": 3,
+          "application_file": "index.js",
+          "context": "app"
+        }
+      ],
+      "deploy": null,
+      "url": "https://app.honeybadger.io/projects/68958/faults/95438392/01GYHPMEA2Y6QXEQKPD5F0ABYS",
+      "id": "d22a3f2e-e719-4ba3-bbd4-f37be4948ad9"
+    }
+  ],
+  "links": {
+    "self": "https://app.honeybadger.io/v2/projects/68958/faults/95438392/notices"
+  }
+}
