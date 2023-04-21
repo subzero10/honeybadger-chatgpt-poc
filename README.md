@@ -40,12 +40,25 @@ app.post('/math-division', (req, res) => {
 // ...
 ```
 
-We get the following output:
+We _MIGHT_ the following output:
 ```text
 The error is caused by trying to access a property of an undefined object. The 'valueA' property of the 'req.body' object is not defined, so the code needs to be changed to check if the object is defined before trying to access its properties.
 27 -  const valueA = req.body.valueA
 27 +  const valueA = req.body && req.body.valueA ? req.body.valueA : null
 28 -  const valueB = req.body.valueB
 28 +  const valueB = req.body && req.body.valueB ? req.body.valueB : null
+```
+
+Or this:
+```text
+Check if req.body is defined before accessing its properties
+26 +  if (req.body) {
+27 -  const valueA = req.body.valueA
+27 +    const valueA = req.body.valueA
+28 -  const valueB = req.body.valueB
+28 +    const valueB = req.body.valueB
+29 -  if (valueB === 0) {
+29 +    if (valueB === 0) {
+29 +    }
 ```
 

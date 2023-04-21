@@ -1,10 +1,17 @@
+import * as dotenv from 'dotenv'
+dotenv.config()
+
 import { getNoticeDetails } from "./hb-api";
-import {askGpt, composePrompt, mapCompletionToFixes} from "./openai-api";
-import {createGitStyleDiff} from "./github-api";
+import { askGpt, composePrompt, mapCompletionToFixes } from "./openai-api";
+import { createGitStyleDiff } from "./github-api";
 
 async function main() {
-    const projectId = process.env.HONEYBADGER_PROJECT_ID;
-    const faultId = process.env.HONEYBADGER_FAULT_ID;
+    if (!process.env.HONEYBADGER_PROJECT_ID || !process.env.HONEYBADGER_FAULT_ID) {
+        throw new Error("HONEYBADGER_PROJECT_ID and HONEYBADGER_FAULT_ID must be set");
+    }
+
+    const projectId = +process.env.HONEYBADGER_PROJECT_ID;
+    const faultId = +process.env.HONEYBADGER_FAULT_ID;
 
     const noticeDetails = await getNoticeDetails(projectId, faultId);
     console.log(noticeDetails);
